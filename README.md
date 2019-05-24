@@ -1,4 +1,4 @@
-# Base Directory Converter
+# Base Directory Path Converter
 
 This package converts file paths to starting from a desired "base" directory.
 
@@ -13,7 +13,7 @@ then the returned filepath will be `sourceDirectory/example/test.file`
 ## Installation
 
 ```
-npm install --save base-directory-converter
+npm install --save base-path-converter
 ```
 
 ## Usage
@@ -33,7 +33,7 @@ In this example, we want to overwrite the filepath we're sending for each file, 
 ```javascript
 const recursive = require('recursive-fs');
 const FormData = require('form-data');
-const baseDirectoryConverter = require('base-directory-converter');
+const basePathConverter = require('base-path-converter');
 
 const src = './../builds/React-Builds/myBuild/'
 recursive.readdirr(src, function (err, dirs, files) {
@@ -41,7 +41,7 @@ recursive.readdirr(src, function (err, dirs, files) {
     files.forEach((file) => {
         const filepath = path.normalize(file);
         body.append(`file`, fs.createReadStream(file), {
-            filepath: baseDirectoryConverter(src, file)
+            filepath: basePathConverter(src, file)
         })
     });
 });
