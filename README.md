@@ -33,7 +33,7 @@ In this example, we want to overwrite the filepath we're sending for each file, 
 ```javascript
 const recursive = require('recursive-fs');
 const FormData = require('form-data');
-const baseDirectoryConverter = require('base-directory-converter);
+const baseDirectoryConverter = require('base-directory-converter');
 
 const src = './../builds/React-Builds/myBuild/'
 recursive.readdirr(src, function (err, dirs, files) {
