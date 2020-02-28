@@ -4,11 +4,12 @@ This package converts file paths to starting from a desired "base" directory.
 
 For example:
 
-If the sourcePath is `parentDirectory/childDirectory/sourceFolder` 
+If the sourcePath is `parentDirectory/childDirectory/sourceDirectory` 
 
 and the provided filePath is `parentDirectory/childDirectory/sourceDirectory/example/test.file`
 
 then the returned filepath will be `sourceDirectory/example/test.file`
+
 
 ## Installation
 
@@ -46,3 +47,6 @@ recursive.readdirr(src, function (err, dirs, files) {
     });
 });
 ```
+
+####Special Handling of `./`
+If the sourcePath is passed in and begins with `./`, then the `./` will be trimmed from the beginning of it before the sourcePath is processed.

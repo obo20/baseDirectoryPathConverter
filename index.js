@@ -1,7 +1,10 @@
 function convertFilePathToBaseDirectoryPath(sourcePath, filePath) {
-    let newString = sourcePath;
+    let newString = (sourcePath.startsWith('./') ? sourcePath.substring(2) : sourcePath);
     //make sure there isn't a dangling / to throw a false positive into the mix
-    const lastIndexOfDirectory = sourcePath.lastIndexOf('/');
+    const lastIndexOfDirectory = newString.lastIndexOf('/');
+    if(lastIndexOfDirectory === -1) {
+        return filePath;
+    }
     const lengthOfSource = sourcePath.length;
     //only trim if the / is the last character in the string
     if (lastIndexOfDirectory === (lengthOfSource - 1)) {

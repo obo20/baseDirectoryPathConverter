@@ -1,5 +1,5 @@
 {
-  "name": "base-directory-convert",
+  "name": "base-path-converter",
   "version": "1.0.2",
   "description": "Convert file paths to start with their base directory",
   "main": "index.js",
@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/obo20/baseDirectoryConverter.git"
+    "url": "https://github.com/obo20/baseDirectoryPathConverter.git"
   },
   "keywords": [
     "base",
@@ -19,9 +19,9 @@
   "author": "Matt Ober",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/obo20/baseDirectoryConverter/issues"
+    "url": "https://github.com/obo20/baseDirectoryPathConverter/issues"
   },
-  "homepage": "https://github.com/obo20/baseDirectoryConverter",
+  "homepage": "https://github.com/obo20/baseDirectoryPathConverter",
   "devDependencies": {
     "jest": "^24.8.0"
   }
